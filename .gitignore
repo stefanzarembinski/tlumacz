@@ -1,0 +1,12 @@
+
+*.pyc
+build
+temp.py
+tlumacz.spec
+.vscode/settings.json
+axevici.md
+oferty/oferta.docx
+*.docx\#
+tlumacz.exe
+tlumacz.db
+tlumaczexe/
