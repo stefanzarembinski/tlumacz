@@ -2,8 +2,10 @@ import traceback
 import threading
 from random import randrange
 import PySimpleGUI as sg # https://realpython.com/pysimplegui-python/
-# pyinstaller tlumacz.py
+
+# while F:\Workspaces\tlumacz>
 # pyinstaller --onefile --distpath ./tlumaczexe tlumacz.py # --noconsole
+
 # https://github.com/stefanzarembinski/tlumaczexe
 # https://github.com/stefanzarembinski/tlumacz
 
