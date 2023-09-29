@@ -230,8 +230,6 @@ class _Article:
         cur = con.cursor()
 
         if de:
-            # if self.article_id.strip() == '0000361800':
-            #     import pdb; pdb.set_trace()
             self.is_regex = Regex.get().is_regex(article_id)
             if self.is_regex:
                 self.de = de
@@ -257,13 +255,6 @@ class _Article:
                 else:
                     _article = True
         else: # Call from the teatcher. 'pl' is set if 'de' is not. 
-            # stop = False
-            # if pl == 'Zasuwa elektropneumatyczna ECO-P 230 V „S” 250 mm':
-            # if self.article_id == '0000397049' or self.article_id == '8200100049':
-            #     stop = True
-            if self.article_id.strip() == '0000361800':
-                import pdb; pdb.set_trace()
-
             cur.execute(f"SELECT * FROM {ARTICLES} WHERE {ID}='{article_id}'")
             _articles = cur.fetchall()
 
