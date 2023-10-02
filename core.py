@@ -230,6 +230,8 @@ class _Article:
         cur = con.cursor()
 
         if de:
+            # if article_id == '0000361800':
+            #     import pdb; pdb.set_trace()
             self.is_regex = Regex.get().is_regex(article_id)
             if self.is_regex:
                 self.de = de
