@@ -262,7 +262,7 @@ while True:
         window['-RUNNING-'].update_animation(GIF, time_between_frames=200)
 
     if WARNINGS:
-        sg.popup_scrolled(WARNINGS, title='Warnings')
+        sg.popup_scrolled(WARNINGS, title='Warnings', size=(80, 10))
         WARNINGS = None
 
     if ERROR:
@@ -270,7 +270,7 @@ while True:
         if error_msg is None:
             error_msg = str(str(ERROR[0]))
 
-        sg.popup(error_msg, title='Error')
+        sg.popup_scrolled(error_msg, title='Error', size=(80, 10))
         if not isinstance(ERROR[0], HealthyException):
             break
         ERROR = None
@@ -283,7 +283,7 @@ while True:
         try:
             sg.popup_scrolled(database.regex_in_database(), title='REGEX', size=(80, 10))
         except Exception as ex:
-            sg.popup(traceback.format_exc(), title='Error')
+            sg.popup_scrolled(traceback.format_exc(), title='Error', size=(80, 10))
 
 
     if event == '-TARGET_LANG-':
@@ -302,7 +302,7 @@ while True:
 {transl}
 '''
         print(msg)
-        sg.popup(msg, title='Translate Clipboard')
+        sg.popup_scrolled(msg, title='Translate Clipboard', size=(80, 10))
         
     if event == '-DO_TRANSLATE-':
         # import pdb; pdb.set_trace()
